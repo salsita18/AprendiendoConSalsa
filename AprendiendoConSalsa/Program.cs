@@ -13,18 +13,44 @@ namespace AprendiendoConSalsa
             //Hola Mundo!
 
             Console.WriteLine("Los saluda, salsita de Salsa Tecnologica");
+            
+            // si soy mayor de edad, entonces: paso al boliche, sino: no paso al boliche
 
-            Console.WriteLine("¿Como te llamas?");
-            string nombre = Console.ReadLine();
+            
+            Console.WriteLine("Que quieres hacer?");
+            string intencion = Console.ReadLine();
+            
+            Console.WriteLine("Cual es tu edad?");
+            string textoEdad = Console.ReadLine();
 
-            Console.WriteLine("Che, un gusto viejardo, que buen nombre: ");
-            Console.WriteLine(nombre);
+            // 3 != "3"
 
-            Console.WriteLine("¿Y cual es tu edad?");
-            string edad = Console.ReadLine();
+            int numeroEdad = int.Parse(textoEdad);
 
-            Console.WriteLine("Que copado tener: ");
-            Console.WriteLine(edad);
+            if (intencion == "ir al boliche")
+            {
+                if (numeroEdad >= 18)
+                {
+                    Console.WriteLine("Puedes pasar.");
+                }
+                else
+                {
+                    Console.WriteLine("No puedes pasar.");
+                }
+            }
+            else
+            {
+                if (numeroEdad >= 21)
+                {
+                    Console.WriteLine("Puedes casarte.");
+                }
+                else
+                {
+                    Console.WriteLine("No puedes casarte.");
+                }
+            }
+            
+
 
             Console.ReadLine();
         }
